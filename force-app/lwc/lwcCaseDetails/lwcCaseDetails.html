@@ -1,0 +1,31 @@
+<template>
+    <lightning-button variant="base" label="Show Details" onclick={handleShowButtonClick} class="slds-m-left_x-small"></lightning-button>
+    <div class="slds-var-m-vertical_medium">
+    <template if:true={showDetails}>
+    <lightning-card
+    title="Case details"
+    icon-name="standard:case"
+    >
+    <div class="slds-var-m-around_medium">
+    <lightning-record-view-form
+    object-api-name={objectApiName}
+    record-id={recordId}
+    >
+    <lightning-output-field
+    field-name="CreatedDate"
+    ></lightning-output-field>
+    <lightning-output-field
+    field-name="Status"
+    ></lightning-output-field>
+    <lightning-output-field
+    field-name="Priority"
+    ></lightning-output-field> 
+    </lightning-record-view-form>
+    </div>
+    </lightning-card>
+    </template> 
+    <template if:false={showDetails}>
+    Not showing details.
+    </template> 
+    </div>
+</template>

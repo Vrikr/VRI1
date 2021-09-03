@@ -1,0 +1,23 @@
+<template>
+    <lightning-card
+    title="Contact details"
+    icon-name="standard:contact"
+    >
+    <div class="slds-var-m-around_medium">
+    <lightning-record-view-form
+    object-api-name={objectApiName}
+    record-id={recordId}
+    >
+    <lightning-output-field
+    field-name="Name"
+    ></lightning-output-field>
+    <lightning-output-field
+    field-name="Title"
+    ></lightning-output-field>
+    <lightning-output-field
+    field-name="Email"
+    ></lightning-output-field>
+    </lightning-record-view-form>
+    </div>
+    </lightning-card> 
+   </template>

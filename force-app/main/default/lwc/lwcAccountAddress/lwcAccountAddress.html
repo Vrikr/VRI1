@@ -1,0 +1,26 @@
+<template>
+    <lightning-button variant="brand" label="Show Address" onclick={handleShowButtonClick} class="slds-m-left_x-small"></lightning-button>
+    <div class="slds-var-m-vertical_medium">
+    <template if:true={showAddress}>
+    <lightning-card
+    title="Account Address"
+    icon-name="standard:account"
+    >
+    <div class="slds-var-m-around_medium">
+    <lightning-record-view-form
+    object-api-name={objectApiName}
+    record-id={recordId}
+    >
+    <lightning-output-field
+    field-name="ShippingAddress"
+    ></lightning-output-field>
+    
+    </lightning-record-view-form>
+    </div>
+    </lightning-card>
+    </template> 
+    <template if:false={showAddress}>
+    Not showing.
+    </template> 
+    </div>
+   </template>
